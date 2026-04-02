@@ -23,3 +23,4 @@ Price Alerts: Notifications when an asset hits a specific target price.
 Diversification Score: Suggestions to balance the portfolio if it becomes "too heavy" in one asset class.
 
 Future Predictions: Simple linear projections of portfolio value based on 5% or 10% growth scenarios.
+THIS WILL HELP IN FUTURE PREDICTIION
