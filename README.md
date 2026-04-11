@@ -1,4 +1,5 @@
-# Porfolio-simulator-
+PROTRACKER
+
 A virtual money tracker and investment portfolio simulator with live API data.
 ProTrack is a real-time web application designed to help users track their virtual investments across Crypto, Stocks, and Mutual Funds. It provides a "safe-space" for users to simulate buying assets, tracking live market fluctuations, and analyzing their risk exposure without risking actual capital.
 🛠️ Tech Stack
