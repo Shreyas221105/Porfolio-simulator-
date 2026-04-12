@@ -1,21 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Crypto Tracker</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProTracker - Simple Crypto Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
+    <header>
+        <h1>ProTracker 📈</h1>
+        <button id="theme-toggle">Toggle Dark Mode</button>
+    </header>
 
-  <div class="container">
-    <h1>💰 Crypto Price Tracker</h1>
+    <main>
+        <section class="controls">
+            <input type="text" id="search-bar" placeholder="Search for a crypto...">
+            
+            <select id="sort-dropdown">
+                <option value="default">Sort by...</option>
+                <option value="price-asc">Price (Low to High)</option>
+                <option value="price-desc">Price (High to Low)</option>
+                <option value="name-asc">Name (A-Z)</option>
+            </select>
+        </section>
 
-    <input type="text" id="coinInput" placeholder="Enter coin (e.g. bitcoin)" />
-    <button onclick="getPrice()">Get Price</button>
+        <section id="asset-container" class="grid-container">
+            <p id="loading-msg">Loading live market data...</p>
+        </section>
+    </main>
 
-    <div id="result"></div>
-  </div>
+    <div id="chart-modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2 id="modal-title">Price Chart</h2>
+            <div class="canvas-container">
+                <canvas id="crypto-chart"></canvas>
+            </div>
+        </div>
+    </div>
 
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
