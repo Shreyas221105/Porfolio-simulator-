@@ -1,27 +1,53 @@
-PROTRACKER
+# 📊 ProTracker - Capstone Project
 
-A virtual money tracker and investment portfolio simulator with live API data.
-ProTrack is a real-time web application designed to help users track their virtual investments across Crypto, Stocks, and Mutual Funds. It provides a "safe-space" for users to simulate buying assets, tracking live market fluctuations, and analyzing their risk exposure without risking actual capital.
-🛠️ Tech Stack
-Frontend: React.js (UI Components & State Management)
+## 🎯 Project Overview
+ProTracker is a frontend web application developed as a capstone project to demonstrate core web development concepts, including API integration, DOM manipulation, and modern JavaScript data handling. The application serves as a simulated dashboard for tracking live cryptocurrency market prices.
 
-Backend: Node.js & Express (API Routing & Logic)
+The primary objective of this project is to refine my foundational knowledge of JavaScript by strictly applying modern array methods and asynchronous programming, bypassing the use of external frameworks or libraries.
 
-Database: MongoDB (User portfolios & transaction history)
+---
 
-Data Visualization: Chart.js or Recharts (Growth & Allocation graphs)
+## 💻 Technical Stack
+* 🌐 **HTML5:** Semantic document structure.
+* 🎨 **CSS3:** Custom styling, responsive layouts (Flexbox/Grid), and CSS variables for theme management.
+* ⚡ **Vanilla JavaScript (ES6+):** Client-side logic, data fetching, and dynamic UI rendering.
+* 🔗 **API:** CoinGecko Public API (Free Tier).
 
-🌐 Public API Integration
-This project utilizes the CoinGecko API (Free Tier) to fetch live market prices for Cryptocurrencies in INR.
+---
 
-Endpoint Example: https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=inr
+## 🧠 Core Concepts Demonstrated
+This project was built to meet specific academic milestones, focusing heavily on the following concepts:
 
-✨ Key FeaturesLive Asset Tracking: Add investments (Name, Quantity, Buy Price) and see their current value update in real-time.Dynamic Profit/Loss: Automatic calculation of ROI based on the difference between Invested Value and Current Market Value.Smart Risk Scoring: A weighted algorithm that assigns risk levels (0.3 to 0.9) based on asset types (Mutual Funds vs. Crypto).Formula: $\text{Risk Score} = \frac{\sum (\text{Asset Value} \times \text{Risk Weight})}{\text{Total Portfolio Value}}$Historical Graphing: A line chart visualizing the growth of total portfolio value over time.Search & Filter: Users can search through their transaction history or filter their view by asset category (e.g., "Show only Crypto").
+1. 📡 **API Integration (`fetch`):** Utilizing `async/await` to request real-time market data from the CoinGecko API, while gracefully handling potential network errors and loading states.
+2. 🔄 **Array Higher-Order Functions:** Traditional `for` and `while` loops were intentionally avoided. All data manipulation is handled via:
+   * `.map()` to generate dynamic HTML elements for the asset grid.
+   * `.filter()` to power the search bar functionality based on user input.
+   * `.sort()` to reorganize data based on price or alphabetical order.
+3. 🖱️ **Event Handling & DOM Manipulation:** Creating an interactive user experience through event listeners (`input`, `change`, `click`) to update the UI without reloading the page.
 
-🔮 Future Enhancements
-Price Alerts: Notifications when an asset hits a specific target price.
+---
 
-Diversification Score: Suggestions to balance the portfolio if it becomes "too heavy" in one asset class.
+## ✨ Features Implemented
+* 📈 **Live Market Feed:** Fetches and displays top cryptocurrencies, including current price (INR), market cap ranking, and symbols.
+* 🔍 **Search Filtering:** Allows users to dynamically filter the displayed assets by typing a coin's name or symbol.
+* 📉 **Data Sorting:** Provides dropdown functionality to arrange the market data by price (ascending/descending) or alphabetically.
+* 🌗 **Light/Dark Mode Toggle:** A theme switch implemented using CSS variables to improve usability and demonstrate state toggling.
+* 📱 **Responsive UI:** The layout automatically adapts to desktop, tablet, and mobile screen sizes.
 
-Future Predictions: Simple linear projections of portfolio value based on 5% or 10% growth scenarios.
-THIS WILL HELP IN FUTURE PREDICTIION
+---
+
+## 🚀 Local Setup & Execution
+Because this project utilizes Vanilla JavaScript and no build tools or package managers, setup is straightforward:
+
+1. **Clone or download** this repository to your local machine.
+2. **Extract** the files into a dedicated folder.
+3. **Open** the `index.html` file in any modern web browser. 
+*(Optional: Use the VS Code "Live Server" extension for a smoother development experience).*
+
+---
+
+## 🔮 Future Scope (Next Learning Phase)
+As I continue to refine my knowledge, I plan to evolve this frontend prototype into a full MERN stack application. Future iterations will include:
+* 🗄️ **Backend Database:** Implementing Node.js and MongoDB to allow users to create accounts and save mock portfolios.
+* 🧮 **Dynamic Calculations:** Tracking simulated Profit/Loss based on user-inputted "buy prices" versus the live API data.
+* ⚖️ **Risk Analysis:** Implementing a custom mathematical algorithm to assign a risk score to a user's chosen portfolio.
